@@ -1,1 +1,20 @@
-<p>login works!</p>
+<form>
+  <label>Användarnamn</label>
+  <input
+    placeholder="Ange användarnamn..."
+    name="username"
+    minLength="{5}"
+    maxLength="{64}"
+    required
+  />
+  <label>Lösenord</label>
+  <input
+    placeholder="Ange lösenord..."
+    name="password"
+    type="password"
+    minLength="{5}"
+    maxLength="{64}"
+    required
+  />
+  <button type="submit">Logga in</button>
+</form>

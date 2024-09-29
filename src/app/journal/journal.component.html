@@ -1,1 +1,19 @@
-<p>journal works!</p>
+<form>
+  <label>Tillstånd</label>
+  <select name="state" required>
+    <option disabled value="">Ange ett tillstånd...</option>
+    <option value="SAD">Ledsen</option>
+    <option value="HAPPY">Glad</option>
+    <option value="STRESSED">Stressad</option>
+    <option value="ANGRY">Arg</option>
+    <option value="TIRED">Trött</option>
+  </select>
+  <label>Anteckning</label>
+  <textarea
+    name="note"
+    placeholder="Ange anteckning..."
+    maxlength="800"
+    required
+  ></textarea>
+  <button type="submit">Nytt inlägg</button>
+</form>
