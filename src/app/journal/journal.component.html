@@ -12,8 +12,61 @@
   <textarea
     name="note"
     placeholder="Ange anteckning..."
-    maxlength="800"
+    maxlength="600"
     required
   ></textarea>
   <button type="submit">Nytt inlägg</button>
 </form>
+<div id="post-container">
+  <h3>Inlägg</h3>
+  <input
+    id="date-picker-max"
+    class="date-picker"
+    type="date"
+    max="2025-01-01"
+  />
+  <input
+    id="date-picker-min"
+    class="date-picker"
+    type="date"
+    min="2023-01-01"
+  />
+  <ul>
+    <li>
+      <input
+        class="post-title"
+        name="title"
+        type="text"
+        maxlength="25"
+        disabled
+      />
+      <input
+        class="date-picker"
+        name="date"
+        type="date"
+        min="2023-01-01"
+        max="2025-01-01"
+        disabled
+      />
+      <textarea name="text" maxlength="600" disabled></textarea>
+    </li>
+    <li>
+      <input
+        class="post-title"
+        name="title"
+        type="text"
+        maxlength="25"
+        disabled
+      />
+      <input
+        class="date-picker"
+        name="date"
+        type="date"
+        min="2023-01-01"
+        max="2025-01-01"
+        disabled
+      />
+      <textarea name="text" maxlength="600" disabled></textarea>
+    </li>
+  </ul>
+</div>
