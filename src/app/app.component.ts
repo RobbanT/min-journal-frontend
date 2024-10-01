@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
@@ -21,5 +21,13 @@ import { RegisterComponent } from './register/register.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'min-journal-frontend';
+  title = signal('Hem');
+
+  getTitle() {
+    return this.title();
+  }
+
+  setTitle(title: string) {
+    this.title.set(title);
+  }
 }

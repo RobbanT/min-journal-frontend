@@ -1,6 +1,7 @@
 <nav>
-  <a>Hem</a>
-  <a>Logga in</a>
-  <a>Registrera</a>
-  <a>Journal</a>
+  <a (click)="changeTitle('Hem')">Hem</a>
+  <a (click)="changeTitle('Logga in')">Logga in</a>
+  <a (click)="logOut()">Logga ut</a>
+  <a (click)="changeTitle('Registrera')">Registrera</a>
+  <a (click)="changeTitle('Journal')">Journal</a>
 </nav>
