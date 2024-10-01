@@ -22,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
 })
 export class AppComponent {
   title = signal('Hem');
+  userLoggedIn = signal(false);
 
   getTitle() {
     return this.title();
@@ -29,5 +30,13 @@ export class AppComponent {
 
   setTitle(title: string) {
     this.title.set(title);
+  }
+
+  getUserLoggedIn() {
+    return this.userLoggedIn();
+  }
+
+  setUserLoggedIn(userLoggedIn: boolean) {
+    this.userLoggedIn.set(userLoggedIn);
   }
 }

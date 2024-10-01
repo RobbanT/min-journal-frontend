@@ -4,7 +4,10 @@
     @if(title() == "Hem"){
     <app-home></app-home>
     } @else if (title()== "Logga in") {
-    <app-login></app-login>
+    <app-login
+      (changedTitle)="changeTitle($event)"
+      (changedUserLoggedIn)="changeUserLoggedIn($event)"
+    ></app-login>
     } @else if (title() == "Registrera") {
     <app-register (changedTitle)="changeTitle($event)"></app-register>
     } @else if (title() == "Journal") {

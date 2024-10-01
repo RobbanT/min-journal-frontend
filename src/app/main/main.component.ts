@@ -14,7 +14,11 @@ import { JournalComponent } from '../journal/journal.component';
 export class MainComponent {
   title = input();
   changedTitle = output<string>();
+  changedUserLoggedIn = output<boolean>();
 
+  changeUserLoggedIn(userloggedIn: boolean) {
+    this.changedUserLoggedIn.emit(userloggedIn);
+  }
   changeTitle(title: string) {
     this.changedTitle.emit(title);
   }

@@ -1,3 +1,11 @@
 <app-header></app-header>
-<app-nav (changedTitle)="setTitle($event)"></app-nav>
-<app-main (changedTitle)="setTitle($event)" [title]="getTitle()"></app-main>
+<app-nav
+  (changedTitle)="setTitle($event)"
+  [userLoggedIn]="getUserLoggedIn()"
+  (changedUserLoggedIn)="setUserLoggedIn($event)"
+></app-nav>
+<app-main
+  (changedTitle)="setTitle($event)"
+  [title]="getTitle()"
+  (changedUserLoggedIn)="setUserLoggedIn($event)"
+></app-main>

@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -8,6 +8,8 @@ import { Component, output } from '@angular/core';
   styleUrl: './nav.component.css',
 })
 export class NavComponent {
+  userLoggedIn = input();
+  changedUserLoggedIn = output<boolean>();
   changedTitle = output<string>();
 
   changeTitle(title: string) {
@@ -15,12 +17,8 @@ export class NavComponent {
   }
 
   logOut() {
-    // Logga ut kod här.
+    localStorage.removeItem('user');
     this.changedTitle.emit('Hem');
+    this.changedUserLoggedIn.emit(false);
   }
-
-  showJournal = true;
-  showLogin = true;
-  showOut = true;
-  showRegister = true;
 }

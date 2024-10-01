@@ -19,6 +19,27 @@ export class RegisterComponent {
   }
   formSubmit() {
     console.log('Form submit');
-    this.changeTitle('Hem');
+    if (this.password == this.passwordConfirm) {
+      fetch('http://localhost:8080/user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: this.username,
+          password: this.password,
+        }),
+      })
+        .then((res) => res.json())
+        .then(() => {
+          alert(`Användaren "${this.username}" är nu registrerad!`);
+          this.changeTitle('Hem');
+        })
+        .catch(() =>
+          alert(`Användaren "${this.username}" existerar redan. Försök igen!`)
+        );
+    } else {
+      alert('Lösenorden stämmer inte överens. Försök igen!');
+    }
   }
 }
