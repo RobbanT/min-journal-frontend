@@ -1,56 +1,29 @@
 <form (ngSubmit)="formSubmit()">
-  <label>Tillstånd</label>
-  <select name="state" required [(ngModel)]="state">
-    <option disabled value="">Ange ett tillstånd...</option>
-    <option value="SAD">Ledsen</option>
-    <option value="HAPPY">Glad</option>
-    <option value="STRESSED">Stressad</option>
-    <option value="ANGRY">Arg</option>
-    <option value="TIRED">Trött</option>
-  </select>
-  <label>Anteckning</label>
-  <textarea
-    name="note"
-    placeholder="Ange anteckning..."
-    maxlength="600"
-    required
-    [(ngModel)]="note"
-  ></textarea>
-  <button type="submit">Nytt inlägg</button>
+    <label>Tillstånd</label>
+    <select placeholder="hej" name="state" required [(ngModel)]="state">
+        <option value="" disabled selected>Ange ett tillstånd...</option>
+        <option value="SAD">Ledsen</option>
+        <option value="HAPPY">Glad</option>
+        <option value="STRESSED">Stressad</option>
+        <option value="ANGRY">Arg</option>
+        <option value="TIRED">Trött</option>
+    </select>
+    <label>Anteckning</label>
+    <textarea name="note"placeholder="Ange anteckning..." maxlength="600" required [(ngModel)]="note"></textarea>
+    <button type="submit">Nytt inlägg</button>
 </form>
+
 <div id="post-container">
-  <h3>Inlägg</h3>
-  <input
-    id="date-picker-max"
-    class="date-picker"
-    type="date"
-    max="2025-01-01"
-  />
-  <input
-    id="date-picker-min"
-    class="date-picker"
-    type="date"
-    min="2023-01-01"
-  />
-  <ul>
-    <li>
-      <input
-        value="Trött"
-        class="post-title"
-        name="title"
-        type="text"
-        maxlength="25"
-        disabled
-      />
-      <input
-        class="date-picker"
-        name="date"
-        type="date"
-        min="2023-01-01"
-        max="2025-01-01"
-        disabled
-      />
-      <textarea name="text" maxlength="600" disabled>Vill sova nu!</textarea>
-    </li>
-  </ul>
+    <h3>Inlägg</h3>
+    <input (change)="pickMaxDate($event)" id="date-picker-max" class="date-picker" type="date" max="2025-01-01" [(ngModel)]="datePickerMax"/>
+    <input (change)="pickMinDate($event)" id="date-picker-min" class="date-picker" type="date" min="2024-01-01" [(ngModel)]="datePickerMin"/>
+    <ul>
+        @for(post of posts; track post.createdTime) {
+            <li>
+                <input class="post-title" value={{post.state}} name="title" type="text" maxlength="25" disabled/>
+                <input class="date-picker" value={{post.createdTime}} name="date" type="datetime" min="2023-01-01" max="2025-01-01" disabled/>
+                <textarea value={{post.note}} name="text" maxlength="600" disabled></textarea>
+            </li>
+        }
+    </ul>
 </div>

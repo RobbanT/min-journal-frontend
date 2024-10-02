@@ -7,5 +7,6 @@ export enum States {
 }
 export interface Post {
   state: States;
+  createdTime: string;
   note: string;
 }

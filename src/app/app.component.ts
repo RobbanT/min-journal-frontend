@@ -22,7 +22,7 @@ import { RegisterComponent } from './register/register.component';
 })
 export class AppComponent {
   title = signal('Hem');
-  userLoggedIn = signal(false);
+  userLoggedIn = signal(localStorage.getItem('user') != null);
 
   getTitle() {
     return this.title();
