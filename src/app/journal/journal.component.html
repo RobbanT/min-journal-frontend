@@ -1,6 +1,6 @@
-<form>
+<form (ngSubmit)="formSubmit()">
   <label>Tillstånd</label>
-  <select name="state" required>
+  <select name="state" required [(ngModel)]="state">
     <option disabled value="">Ange ett tillstånd...</option>
     <option value="SAD">Ledsen</option>
     <option value="HAPPY">Glad</option>
@@ -14,6 +14,7 @@
     placeholder="Ange anteckning..."
     maxlength="600"
     required
+    [(ngModel)]="note"
   ></textarea>
   <button type="submit">Nytt inlägg</button>
 </form>
