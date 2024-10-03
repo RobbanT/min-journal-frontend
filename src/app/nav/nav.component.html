@@ -1,7 +1,7 @@
 <nav>
-  <a (click)="changeTitle('Hem')">Hem</a>
-  <a (click)="changeTitle('Logga in')" [hidden]="userLoggedIn()">Logga in</a>
-  <a (click)="logOut()" [hidden]="!userLoggedIn()">Logga ut</a>
-  <a (click)="changeTitle('Registrera')" [hidden]="userLoggedIn()">Registrera</a>
-  <a (click)="changeTitle('Journal')" [hidden]="!userLoggedIn()">Journal</a>
+    <a (click)="changeTitle('Hem')">Hem</a>
+    <a (click)="changeTitle('Logga in')" [hidden]="userLoggedIn()">Logga in</a>
+    <a (click)="logOut()" [hidden]="!userLoggedIn()">Logga ut</a>
+    <a (click)="changeTitle('Registrera')" [hidden]="userLoggedIn()">Registrera</a>
+    <a (click)="changeTitle('Journal')" [hidden]="!userLoggedIn()">Journal</a>
 </nav>

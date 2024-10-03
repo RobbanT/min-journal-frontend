@@ -17,6 +17,7 @@
     <h3>Inlägg</h3>
     <input (change)="pickMaxDate($event)" id="date-picker-max" class="date-picker" type="date" max="2025-01-01" [(ngModel)]="datePickerMax"/>
     <input (change)="pickMinDate($event)" id="date-picker-min" class="date-picker" type="date" min="2024-01-01" [(ngModel)]="datePickerMin"/>
+    <h4>Antal inlägg: {{posts.length}} - Vanligaste tillståndet: {{mostCommonState}}</h4>
     <ul>
         @for(post of posts; track post.createdTime) {
             <li>

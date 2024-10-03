@@ -1,17 +1,14 @@
 <main>
-  <div class="container">
-    <h2>{{ title() }}</h2>
-    @if(title() == "Hem"){
-    <app-home></app-home>
-    } @else if (title()== "Logga in") {
-    <app-login
-      (changedTitle)="changeTitle($event)"
-      (changedUserLoggedIn)="changeUserLoggedIn($event)"
-    ></app-login>
-    } @else if (title() == "Registrera") {
-    <app-register (changedTitle)="changeTitle($event)"></app-register>
-    } @else if (title() == "Journal") {
-    <app-journal></app-journal>
-    }
-  </div>
+    <div class="container">
+        <h2>{{ title() }}</h2>
+        @if(title() == "Hem"){
+            <app-home></app-home>
+        } @else if (title()== "Logga in") {
+            <app-login (changedTitle)="changeTitle($event)" (changedUserLoggedIn)="changeUserLoggedIn($event)"></app-login>
+        } @else if (title() == "Registrera") {
+            <app-register (changedTitle)="changeTitle($event)"></app-register>
+        } @else if (title() == "Journal") {
+            <app-journal></app-journal>
+        }
+    </div>
 </main>

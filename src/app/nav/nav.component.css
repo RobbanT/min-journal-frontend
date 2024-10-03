@@ -1,17 +1,17 @@
 nav {
-  background-color: #333333;
-  text-align: center;
-  padding: 3px 0;
+    background-color: #333333;
+    text-align: center;
+    padding: 3px 0;
 }
 
 a {
-  font: bold 11px Arial;
-  color: white;
-  text-decoration: none;
-  padding: 7px 25px 5px 25px;
+    font: bold 11px Arial;
+    color: white;
+    text-decoration: none;
+    padding: 7px 25px 5px 25px;
 }
 
 a:hover {
-  background-color: #1a1a1d;
-  cursor: pointer;
+    background-color: #1a1a1d;
+    cursor: pointer;
 }

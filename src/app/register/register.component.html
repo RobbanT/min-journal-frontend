@@ -1,30 +1,9 @@
 <form (ngSubmit)="formSubmit()">
-  <label>Användarnamn</label>
-  <input
-    placeholder="Ange användarnamn..."
-    name="username"
-    minLength="{5}"
-    maxLength="{64}"
-    required
-    [(ngModel)]="username"
-  />
-  <label>Lösenord</label>
-  <input
-    placeholder="Ange lösenord..."
-    name="password"
-    minLength="{5}"
-    maxLength="{64}"
-    required
-    [(ngModel)]="password"
-  />
-  <label>Bekräfta lösenord</label>
-  <input
-    placeholder="Bekräfta lösenord..."
-    name="passwordConfirm"
-    minLength="{5}"
-    maxLength="{64}"
-    required
-    [(ngModel)]="passwordConfirm"
-  />
-  <button type="submit">Bli medlem</button>
+    <label>Användarnamn</label>
+    <input placeholder="Ange användarnamn..." name="username" minLength="{5}" maxLength="{64}" required [(ngModel)]="username"/>
+    <label>Lösenord</label>
+    <input placeholder="Ange lösenord..." name="password" minLength="{5}" maxLength="{64}" required [(ngModel)]="password"/>
+    <label>Bekräfta lösenord</label>
+    <input placeholder="Bekräfta lösenord..." name="passwordConfirm" minLength="{5}" maxLength="{64}" required [(ngModel)]="passwordConfirm"/>
+    <button type="submit">Bli medlem</button>
 </form>

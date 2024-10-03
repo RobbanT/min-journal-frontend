@@ -7,36 +7,37 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    NavComponent,
-    MainComponent,
-    LoginComponent,
-    RegisterComponent,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+    selector: 'app-root',
+    standalone: true,
+    imports: [
+       RouterOutlet,
+       HeaderComponent,
+       NavComponent,
+       MainComponent,
+       LoginComponent,
+       RegisterComponent,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
 })
+  
 export class AppComponent {
-  title = signal('Hem');
-  userLoggedIn = signal(localStorage.getItem('user') != null);
+    title = signal('Hem');
+    userLoggedIn = signal(localStorage.getItem('user') != null);
 
-  getTitle() {
-    return this.title();
-  }
+    getTitle() {
+        return this.title();
+    }
 
-  setTitle(title: string) {
-    this.title.set(title);
-  }
+    setTitle(title: string) {
+        this.title.set(title);
+    }
 
-  getUserLoggedIn() {
-    return this.userLoggedIn();
-  }
+    getUserLoggedIn() {
+        return this.userLoggedIn();
+    }
 
-  setUserLoggedIn(userLoggedIn: boolean) {
-    this.userLoggedIn.set(userLoggedIn);
-  }
+    setUserLoggedIn(userLoggedIn: boolean) {
+        this.userLoggedIn.set(userLoggedIn);
+    }
 }
