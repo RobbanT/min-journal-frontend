@@ -21,7 +21,7 @@ export class RegisterComponent {
   
     formSubmit() {
         if (this.password == this.passwordConfirm) {
-            fetch('http://localhost:8080/user', {
+            fetch('https://min-journal-app-gmr2z.ondigitalocean.app/user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

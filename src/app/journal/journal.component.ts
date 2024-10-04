@@ -23,7 +23,7 @@ export class JournalComponent {
     }
 
     fetchPosts() {
-        fetch(`http://localhost:8080/user/${JSON.parse(localStorage.getItem('user') as string).username}/posts`, {
+        fetch(`https://min-journal-app-gmr2z.ondigitalocean.app/user/${JSON.parse(localStorage.getItem('user') as string).username}/posts`, {
         headers: {
             'Content-Type': 'application/json',
             minDate: this.datePickerMin,
@@ -45,7 +45,7 @@ export class JournalComponent {
     }
 
     formSubmit() {
-        fetch(`http://localhost:8080/user/${JSON.parse(localStorage.getItem('user') as string).username}/post`, {
+        fetch(`https://min-journal-app-gmr2z.ondigitalocean.app/user/${JSON.parse(localStorage.getItem('user') as string).username}/post`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

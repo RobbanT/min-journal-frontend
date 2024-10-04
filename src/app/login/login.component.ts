@@ -25,7 +25,7 @@ export class LoginComponent {
     }
   
     formSubmit() {
-        fetch(`http://localhost:8080/user/${this.username}/${this.password}`)
+        fetch(`https://min-journal-app-gmr2z.ondigitalocean.app/user/${this.username}/${this.password}`)
             .then((res) => res.json()).then((data) => {
                 (data as User).password = '';
                 (data as User).posts = [];
