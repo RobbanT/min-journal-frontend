@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
 import { RegisterComponent } from '../register/register.component';
 import { LoginComponent } from '../login/login.component';

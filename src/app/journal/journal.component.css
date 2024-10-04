@@ -155,7 +155,7 @@ ul {
     margin-bottom: 0;
     overflow-y: auto;
     padding: 0 2px 0 0;
-    height: 275px;
+    height: 250px;
     display: block;
 }
 
@@ -191,47 +191,47 @@ li {
 }
 
 .date-picker:disabled {
-  margin:0;
-  padding: 0 0 0 10px;
-  width: 160px;
-  height: 33px;
+    margin:0;
+    padding: 0 0 0 10px;
+    width: 160px;
+    height: 33px;
 }
 
 .date-picker:disabled:hover {
-  border: #cccccc solid 1px;
-  box-shadow: none;
-  cursor: auto;
+    border: #cccccc solid 1px;
+    box-shadow: none;
+    cursor: auto;
 }
 
 .post-title:disabled {
-  font: lighter 15px Arial;
-  padding-left: 10px;
-  float: left;
-  width: 185px;
-  height: 35px;
-  border-style: none;
-  border: #cccccc solid 1px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  box-shadow: none;
-  color: #606062;
-  caret-color: #606062;
+    font: lighter 15px Arial;
+    padding-left: 10px;
+    float: left;
+    width: 185px;
+    height: 35px;
+    border-style: none;
+    border: #cccccc solid 1px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: none;
+    color: #606062;
+    caret-color: #606062;
 }
 
 .post-title.disabled:hover {
-  border: #cccccc solid 1px;
-  box-shadow: none;
-  cursor: auto;
+    border: #cccccc solid 1px;
+    box-shadow: none;
+    cursor: auto;
 }
 
 textarea:disabled {
-  margin-top: 2px;
+    margin-top: 2px;
 }
 
 textarea:disabled:hover {
-  border: #cccccc solid 1px;
-  box-shadow: none;
-  cursor: auto;
+    border: #cccccc solid 1px;
+    box-shadow: none;
+    cursor: auto;
 }
 
 h4 {
