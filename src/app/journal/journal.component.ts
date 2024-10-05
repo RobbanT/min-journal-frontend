@@ -15,8 +15,8 @@ export class JournalComponent {
     state: States = States.HAPPY;
     stateStatistics: string = "";
     note: string = '';
+    datePickerMin: string = localStorage.getItem('datePickerMin') != null ? (localStorage.getItem('datePickerMin') as string) : '2024-01-01';
     datePickerMax: string = localStorage.getItem('datePickerMax') != null ? (localStorage.getItem('datePickerMax') as string) : '2025-01-01';
-    datePickerMin: string =localStorage.getItem('datePickerMin') != null ? (localStorage.getItem('datePickerMin') as string) : '2024-01-01';
 
     constructor() {
         this.fetchPosts();
@@ -62,9 +62,12 @@ export class JournalComponent {
     }
 
     pickMinDate(event: any) {
+        console.log(event.target.value);
         if (event.target.value > this.datePickerMax) {
             event.target.value = this.datePickerMax;
+            console.log(event.target.value);
             this.datePickerMin = this.datePickerMax;
+            console.log(this.datePickerMin);
         }
         localStorage.setItem('datePickerMin', this.datePickerMin);
         this.fetchPosts();
