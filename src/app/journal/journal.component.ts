@@ -62,22 +62,18 @@ export class JournalComponent {
     }
 
     pickMinDate(event: any) {
-        console.log(event.target.value);
         if (event.target.value > this.datePickerMax) {
-            event.target.value = this.datePickerMax;
+            this.datePickerMin = this.datePickerMax;
         }
-        localStorage.setItem('datePickerMin', event.target.value);
-        console.log(event.target.value);
+        localStorage.setItem('datePickerMin', this.datePickerMin);
         this.fetchPosts();
     }
 
     pickMaxDate(event: any) {
-        console.log(event.target.value);
         if (event.target.value < this.datePickerMin) {
-            this.datePickerMin = this.datePickerMax;
+            this.datePickerMax = this.datePickerMin;
         }
-        console.log(event.target.value);
-        localStorage.setItem('datePickerMax', event.target.value);
+        localStorage.setItem('datePickerMax', this.datePickerMax);
         this.fetchPosts();
     }
 }
