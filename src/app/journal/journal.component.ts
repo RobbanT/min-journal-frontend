@@ -61,19 +61,23 @@ export class JournalComponent {
         }).catch(() => alert('Något gick fel. Försök igen!'));
     }
 
-    pickMaxDate(event: any) {
-        if (event.target.value < this.datePickerMin) {
-            event.target.value = this.datePickerMin;
-        }
-        localStorage.setItem('datePickerMax', event.target.value);
-        this.fetchPosts();
-    }
-
     pickMinDate(event: any) {
+        console.log(event.target.value);
         if (event.target.value > this.datePickerMax) {
             event.target.value = this.datePickerMax;
         }
         localStorage.setItem('datePickerMin', event.target.value);
+        console.log(event.target.value);
+        this.fetchPosts();
+    }
+
+    pickMaxDate(event: any) {
+        console.log(event.target.value);
+        if (event.target.value < this.datePickerMin) {
+            event.target.value = this.datePickerMin;
+        }
+        console.log(event.target.value);
+        localStorage.setItem('datePickerMax', event.target.value);
         this.fetchPosts();
     }
 }
