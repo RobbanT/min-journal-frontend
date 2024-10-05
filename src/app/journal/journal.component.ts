@@ -74,7 +74,7 @@ export class JournalComponent {
     pickMaxDate(event: any) {
         console.log(event.target.value);
         if (event.target.value < this.datePickerMin) {
-            event.target.value = this.datePickerMin;
+            this.datePickerMin = this.datePickerMax;
         }
         console.log(event.target.value);
         localStorage.setItem('datePickerMax', event.target.value);
