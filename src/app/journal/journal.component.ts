@@ -36,11 +36,11 @@ export class JournalComponent {
                 post.createdTime = post.createdTime.replace('T', ' - ').slice(0, 18);
                 tempStateStatistics.set(post.state.toString(), tempStateStatistics.get(post.state.toString()) == null ? 1 : <number>tempStateStatistics.get(post.state.toString()) + 1);
             }
-            this.stateStatistics = `SAD (${tempStateStatistics.get("SAD") != null ? (<number>tempStateStatistics.get("SAD") / this.posts.length * 100).toPrecision(2): 0}%) 
-                HAPPY (${tempStateStatistics.get("HAPPY") != null ? (<number>tempStateStatistics.get("HAPPY") / this.posts.length * 100).toPrecision(2): 0}%) 
-                STRESSED (${tempStateStatistics.get("STRESSED") != null ? (<number>tempStateStatistics.get("STRESSED") / this.posts.length * 100).toPrecision(2): 0}%)
-                ANGRY (${tempStateStatistics.get("ANGRY") != null ? (<number>tempStateStatistics.get("ANGRY") / this.posts.length * 100).toPrecision(2): 0}%)
-                TIRED (${tempStateStatistics.get("TIRED") != null ? (<number>tempStateStatistics.get("TIRED") / this.posts.length * 100).toPrecision(2): 0}%)`
+            this.stateStatistics = `SAD (${tempStateStatistics.get("SAD") != null ? (<number>tempStateStatistics.get("SAD") / this.posts.length * 100).toFixed(2): 0}%) 
+                HAPPY (${tempStateStatistics.get("HAPPY") != null ? (<number>tempStateStatistics.get("HAPPY") / this.posts.length * 100).toFixed(2): 0}%) 
+                STRESSED (${tempStateStatistics.get("STRESSED") != null ? (<number>tempStateStatistics.get("STRESSED") / this.posts.length * 100).toFixed(2): 0}%)
+                ANGRY (${tempStateStatistics.get("ANGRY") != null ? (<number>tempStateStatistics.get("ANGRY") / this.posts.length * 100).toFixed(2): 0}%)
+                TIRED (${tempStateStatistics.get("TIRED") != null ? (<number>tempStateStatistics.get("TIRED") / this.posts.length * 100).toFixed(2): 0}%)`
         });
     }
 
